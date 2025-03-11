@@ -6,6 +6,8 @@ package mx.itson.carrito.ui;
 
 import java.util.Scanner;
 import mx.itson.carrito.entidades.Carro;
+import mx.itson.carrito.entidades.Propietario;
+import mx.itson.carrito.entidades.Servicio;
 import mx.itson.carrito.enums.CategoriaAuto;
 import mx.itson.carrito.enums.TipoMotor;
 
@@ -31,6 +33,24 @@ public class Main {
          bmw.setTipoMotor(TipoMotor.HÍBRIDO);
          bmw.setCategoriaAuto(CategoriaAuto.DEPORTIVO);
          
+         
+         Propietario prop =new Propietario();
+         prop.setNombre("Panfilo Kevin");
+         prop.setDomicilio("calle 23 col centro");
+         prop.setTelefono("6221312356");
+         prop.setEmail("abejita.23@gmail.com");
+         
+         bmw.setPropietario(prop);
+         
+         Servicio serv = new Servicio();
+         serv.setFecha("05/52/25");
+         serv.setEntrada("2:44 pm");
+         serv.setSalida("6:00 pm");
+         serv.setServicio("Cambio de llantas");
+         serv.setCotizacion("2500");
+         
+         bmw.setServicio(serv);
+         
         //Invocamos al metodo contenido en la clase Carro.
          double tiempo = bmw.calcularTiempo(distancia, velocidad);
          
@@ -38,7 +58,8 @@ public class Main {
                  + bmw.getMarca()+
                  " de color " + bmw.getColor() +
                  " y de modelo " + bmw.getAnio() + " es de " +  tiempo +
-                 " y ahora su kilometraje es de: " + bmw.getKilometraje() );
+                 " y ahora su kilometraje es de: " + bmw.getKilometraje() + 
+                 " El propietario de este carro es: " + bmw.getPropietario().getNombre() + " Tipo de servicio: " + bmw.getServicio().getServicio() );
          
     }
 }

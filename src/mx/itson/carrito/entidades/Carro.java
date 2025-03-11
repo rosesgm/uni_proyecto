@@ -14,6 +14,34 @@ import mx.itson.carrito.enums.TipoMotor;
 public class Carro {
 
     /**
+     * @return the servicio
+     */
+    public Servicio getServicio() {
+        return servicio;
+    }
+
+    /**
+     * @param servicio the servicio to set
+     */
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
+    }
+
+    /**
+     * @return the propietario
+     */
+    public Propietario getPropietario() {
+        return propietario;
+    }
+
+    /**
+     * @param propietario the propietario to set
+     */
+    public void setPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
+
+    /**
      * @return the categoriaAuto
      */
     public CategoriaAuto getCategoriaAuto() {
@@ -103,6 +131,9 @@ public class Carro {
    private double kilometraje;
    private TipoMotor tipoMotor;
    private CategoriaAuto categoriaAuto;
+   private Propietario propietario;
+   private Servicio servicio;
+   
    /**
     * Calcula el tiempo en el que tarda  el carro en recorrer una distancia.
     * @param distancia Distancia que recorrerá el carro.
